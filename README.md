@@ -19,7 +19,7 @@
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/your-username/anti-ocr-studio.git
+git clone https://github.com/irenoking/anti-ocr-studio.git
 cd anti-ocr-studio
 ```
 
