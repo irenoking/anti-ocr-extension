@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Anti-OCR Studio",
+  "version": "1.1.0",
+  "description": "右键图片 → Anti-OCR 处理",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    },
+    "default_title": "Anti-OCR Studio"
+  },
+
+  
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [{
+    "resources": ["plugins/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

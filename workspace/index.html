@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Anti-OCR Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2 style="margin:0; font-size:18px; color:var(--accent);">⚙️ 算法流控制台</h2>
+        <div class="config-hint" id="configHint">⚙️ 状态：已启用参数自动本地记忆</div>
+        
+        <div id="pipelineContainer"></div>
+
+    </div>
+
+    <div class="workspace" id="dropZone">
+        <div class="drop-zone" id="dropHint">
+            <div>💡 拖拽图片至此 / 鼠标点击选择文件 / 在页面中 Ctrl+V 粘贴截图</div>
+            <span>( 纯前端矩阵运算，数据绝不上传服务器 )</span>
+        </div>
+        <input type="file" id="hiddenFileInput" accept="image/*" style="display: none;">
+        <canvas id="mainCanvas"></canvas>
+
+        <!-- ✅ 新增：右侧底部控制条 -->
+        <div class="workspace-controls">
+            <button class="btn" id="copyBtn">📋 复制最终魔改图</button>
+            <button class="btn" id="downloadBtn" style="background:#4e4e4e;">💾 下载安全图片</button>
+            <button class="btn" id="resetConfigBtn" style="background:#222; border:1px solid #444;">🔄 恢复插件默认参数</button>
+            <div id="status" style="font-size:12px; text-align:center; color:var(--accent);"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
